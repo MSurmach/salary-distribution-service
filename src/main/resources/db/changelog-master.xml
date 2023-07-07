@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <include file="classpath:db/changelog/v.0.1/2023-07-06-create-schema.xml"/>
+    <include file="classpath:db/changelog/v.0.1/2023-07-06-create-table-budget.xml"/>
+    <include file="classpath:db/changelog/v.0.1/2023-07-06-create-table-daily_work.xml"/>
+    <include file="classpath:db/changelog/v.0.1/2023-07-06-create-table-team.xml"/>
+    <include file="classpath:db/changelog/v.0.1/2023-07-06-create-table-employee.xml"/>
+    <include file="classpath:db/changelog/v.0.2/2023-07-06-filling-tables.xml"/>
+</databaseChangeLog>

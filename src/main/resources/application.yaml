@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5442/salary_distribution_service_db
+    username: m.surmach
+    password: 1111
+  liquibase:
+    change-log: db/changelog-master.xml
+  main:
+    banner-mode: off
+server:
+  port: 8082
+logging:
+  level:
+    root: info
+  file:
+    path: logs
+    name: ${logging.file.path}/salary_distribution_service.log

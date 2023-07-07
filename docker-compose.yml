@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: db
+    ports:
+      - 5442:5432
+    environment:
+      - POSTGRES_USER=m.surmach
+      - POSTGRES_PASSWORD=1111
+      - POSTGRES_DB=salary_distribution_service_db
+  salary-distribution-service:
+    image: salary-distribution-service:latest
+    build: .
+    container_name: salary-distribution-service
+    ports:
+      - 8090:8090
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5442/salary_distribution_service_db
